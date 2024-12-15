@@ -576,7 +576,7 @@ meo.CornerRadius = UDim.new(0, 5)
 meo.Name = "meo"
 meo.Parent = GunsM
 
-SilentAim.Name = "Ailen"
+SilentAim.Name = "SilentAim"
 SilentAim.Parent = Basic
 SilentAim.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
 SilentAim.BackgroundTransparency = 1.000
@@ -838,7 +838,7 @@ FFSpeed.MouseButton1Down:connect(function()
 			v.Value = true
 		end
 		if v.Name == "FireRate" then
-			v.Value = 0.0001
+			v.Value = 0.02
 		end
 	 end
 
