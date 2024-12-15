@@ -20,51 +20,14 @@ Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Main.ResetOnSpawn = false
 Main.DisplayOrder = 9999
 
--- Loader with enhanced style
 Loader.Name = "Loader"
 Loader.Parent = Main
 Loader.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Loader.BackgroundTransparency = 0.2
+Loader.BackgroundTransparency = 0.200
+Loader.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Loader.BorderSizePixel = 0
 Loader.Position = UDim2.new(0.436969697, 0, 0.455082744, 0)
-Loader.Size = UDim2.new(0, 200, 0, 76) -- Adjusted size for better visibility
-
--- Adding a UI corner for rounded edges
-local UICorner = Instance.new("UICorner")
-UICorner.CornerRadius = UDim.new(0, 10) -- Adjust the radius for more rounded corners
-UICorner.Parent = Loader
-
--- Adding a gradient background
-local UIGradient = Instance.new("UIGradient")
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(45, 45, 45)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(29, 29, 29))
-}
-UIGradient.Rotation = 90 -- Vertical gradient
-UIGradient.Parent = Loader
-
--- Adding a shadow effect
-local Shadow = Instance.new("Frame")
-Shadow.Name = "Shadow"
-Shadow.Parent = Loader
-Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow.BackgroundTransparency = 0.8
-Shadow.BorderSizePixel = 0
-Shadow.Position = UDim2.new(0, 2, 0, 2) -- Slight offset for shadow effect
-Shadow.Size = UDim2.new(1, 4, 1, 4)
-Shadow.ZIndex = Loader.ZIndex - 1 -- Ensure shadow is behind the Loader
-local ShadowCorner = Instance.new("UICorner")
-ShadowCorner.CornerRadius = UDim.new(0, 10)
-ShadowCorner.Parent = Shadow
-
--- Adding a hover effect (optional)
-Loader.MouseEnter:Connect(function()
-    Loader.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- Slightly lighter color on hover
-end)
-Loader.MouseLeave:Connect(function()
-    Loader.BackgroundColor3 = Color3.fromRGB(29, 29, 29) -- Return to original color
-end)
-
+Loader.Size = UDim2.new(0, 0, 0, 76)
 Loader.Active = true
 
 UICorner.Parent = Loader
@@ -105,69 +68,18 @@ Bar.BorderSizePixel = 0
 Bar.Position = UDim2.new(0.128272906, 0, 0.75, 0)
 Bar.Size = UDim2.new(0, 154, 0, 6)
 Bar.Active = true
-Bar.BackgroundTransparency = 0.2 -- Reduced transparency for a subtle effect
+Bar.BackgroundTransparency = 1
 
--- Adding a gradient for a better appearance
-local UIGradient = Instance.new("UIGradient")
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 100, 100)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(200, 200, 200))
-}
-UIGradient.Rotation = 90 -- Horizontal gradient
-UIGradient.Parent = Bar
-
--- Adding a shadow effect
-local Shadow = Instance.new("Frame")
-Shadow.Name = "Shadow"
-Shadow.Parent = Bar
-Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow.BackgroundTransparency = 0.5
-Shadow.BorderSizePixel = 0
-Shadow.Position = UDim2.new(0, 2, 0, 2)
-Shadow.Size = UDim2.new(1, 4, 1, 4)
-Shadow.ZIndex = -1
-
--- Adding rounded corners
-local UICorner_3 = Instance.new("UICorner")
-UICorner_3.CornerRadius = UDim.new(0, 3) -- Smooth radius
 UICorner_3.Parent = Bar
 
-
-Loaded.Name = "Loaded"
 Loaded.Name = "Loaded"
 Loaded.Parent = Loader
-Loaded.BackgroundColor3 = Color3.fromRGB(0, 170, 255) -- Vibrant color for the bar
+Loaded.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Loaded.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Loaded.BorderSizePixel = 0
 Loaded.Position = UDim2.new(0.123441979, 0, 0.75, 0)
-Loaded.Size = UDim2.new(0, 0, 0, 6) -- This will work with your animation
+Loaded.Size = UDim2.new(0, 0, 0, 6)
 Loaded.Active = true
-
--- Adding rounded corners
-local UICorner_4 = Instance.new("UICorner")
-UICorner_4.CornerRadius = UDim.new(0, 4) -- Smooth rounded corners
-UICorner_4.Parent = Loaded
-
--- Adding a gradient effect
-local UIGradient = Instance.new("UIGradient")
-UIGradient.Color = ColorSequence.new{
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 150, 255)), -- Gradient start
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 150)) -- Gradient end
-}
-UIGradient.Rotation = 0 -- Horizontal gradient
-UIGradient.Parent = Loaded
-
--- Adding a shadow for depth
-local Shadow = Instance.new("Frame")
-Shadow.Name = "Shadow"
-Shadow.Parent = Loaded
-Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow.BackgroundTransparency = 0.6 -- Semi-transparent shadow
-Shadow.BorderSizePixel = 0
-Shadow.Position = UDim2.new(0, 2, 0, 2) -- Offset for a subtle effect
-Shadow.Size = UDim2.new(1, 4, 1, 4) -- Matches the loaded bar size
-Shadow.ZIndex = -1
-
 
 UICorner_4.Parent = Loaded
 
